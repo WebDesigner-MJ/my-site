@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://webdesigner-mj.github.io/my-site/sitemap.xml
