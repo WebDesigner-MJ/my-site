@@ -1,0 +1,40 @@
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+    <!-- Google Analytics (Google tag) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6NR26D6P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3W6NR26D6P');
+    </script>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page information -->
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <!-- OGP(Open Graph Protocol) -->
+    {% if page.og_title %}
+    <meta property="og_title" content="{{ page.og_title}}">
+    {% endif %}
+    {% if page.og_description %}
+    <meta property="og:description" content="{{ page.og_description }}">
+    {% endif %}
+    {% if page.og_image %}
+    <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+    {% endif %}
+    <!-- Favicon and Web App Manifest -->
+    {% if page.favicon %}
+    <link rel="icon" href="{{ page.favicon | relative_url }}">
+    {% endif %}
+    {% if page.manifest %}
+    <link rel="manifest" href="{{ page.webmanifest | relative_url}}">
+    {% endif %}
+    <!-- CSS -->
+    {% if page.css %}
+    <link rel="stylesheet" href="{{ page.css | relative_url }}">
+    {% endif %}
+    <!-- Scripts -->
+    

@@ -1,5 +1,6 @@
+title: "MJ BASE"
+lang: ja
 url: "https://webdesigner-mj.github.io"
 baseurl: "/my-site"
-
 plugins:
   - jekyll-sitemap
