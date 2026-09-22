@@ -28,53 +28,70 @@
     <link rel="icon" href="/my-site/radio/favicon.ico">
     
     
+    <link rel="apple-touch-icon" href="/my-site/radio/images/app-icons/apple-touch-icon.png">
+    
+    
+    <link rel="manifest" href="/my-site/radio/site.webmanifest">
+    
     <!-- CSS -->
     
-    <link rel="stylesheet" href="/my-site/css/style.css">
+        
+        <link rel="stylesheet" href="/my-site/css/common.css">
+        
+        <link rel="stylesheet" href="/my-site/radio/css/style.css">
+        
     
     <!-- Scripts -->
-    
 </head>
 
 <body>
 
-    <header class="debug l-header l-container u-mb-12">
-    <div class="l-header__brand">
-        <a class="l-header__brand-link" href="glossary.html">
+    <header class="debug l-container p-header u-mb-12">
+    <div class="p-header__brand">
+        <a class="p-header__brand-link" href="glossary.html">
             <img
-                class="l-header__brand-logo"
-                src="images/radio-logo-antenna.svg"
+                class="p-header__brand-logo"
+                src="images/logo/radio-logo-antenna.svg"
                 alt=""
             >
-            <div class="l-header__brand-text">
-                <span class="l-header__brand-title">趣味の無線</span>
-                <p class="l-header__brand-tagline">つながる楽しさ、広がる世界</p>
+            <div class="p-header__brand-text">
+                <span class="p-header__brand-title">趣味の無線</span>
+                <p class="p-header__brand-tagline">つながる楽しさ、広がる世界</p>
             </div>
         </a>
     </div>
 
-    <p class="l-header__description">無線でつながる、趣味と仲間の情報サイト</p>
+    <p class="p-header__description">無線でつながる、趣味と仲間の情報サイト</p>
 
-    <nav class="l-header__nav" aria-label="メインナビゲーション">
-        <ul>
-            <li><a href="glossary.html">ホーム</a></li>
-            <li><a href="#">はじめての方へ</a></li>
-            <li><a href="#">無線の基礎知識</a></li>
-            <li><a href="#">運用ガイド</a></li>
-            <li><a href="#">機材レビュー</a></li>
-            <li><a href="#">資格・試験</a></li>
-            <li><a href="#">無線用語集</a></li>
-            <li><a href="#">コミュニティ</a></li>
-            <li class="l-header__nav-search">
-                <form role="search">
+    <nav class="p-header__nav" aria-label="メインナビゲーション">
+        <ul class="p-header__nav-list">
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="glossary.html">ホーム</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">はじめての方へ</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">無線の基礎知識</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">運用ガイド</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">機材レビュー</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">資格・試験</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">無線用語集</a></li>
+            <li class="p-header__nav-list-item"><a class="p-header__nav-link" href="#">コミュニティ</a></li>
+            <li class="p-header__nav-list-item c-header__nav-search">
+                <form class="p-header__nav-search-form" role="search">
                     <label for="header-nav-search">検索</label>
                     <input
+                        class="p-header__nav-search-input"
                         id="header-nav-search"
                         type="search"
                         placeholder="キーワード"
                     >
-                    <button type="submit" aria-label="検索">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <button
+                        class="p-header__nav-search-button"
+                        type="submit"
+                        aria-label="検索"
+                    >
+                        <svg
+                            class="p-header__nav-search-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
                             <circle cx="11" cy="11" r="6"></circle>
                             <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
                         </svg>
@@ -86,25 +103,29 @@
 </header>
     
 <main class="debug l-container">
-    <div class="p-radio-hero u-mb-8">
+    <div class="p-radio-hero">
         <div class="p-radio-hero__wrap">
             <div class="p-radio-hero__text">
-                <h1>無線用語集</h1>
-                <p>
+                <h1 class="p-radio-hero__page-title">無線用語集</h1>
+                <p class="p-radio-hero__page-description">
                     アマチュア無線でよく使われる用語を、<br>
                     はじめての方にもわかりやすく、やさしく解説。
                 </p>
             </div>
             <span class="p-radio-hero__tagline">
                 電波の先に、<br>
-                <span>新しい出会いがある</span>
+                <span class="p-radio-hero__tagline--indent">新しい出会いがある</span>
             </span>
         </div>
-        <img src="images/radio-hero.webp" alt="">
+        <img
+            class="p-radio-hero__image"
+            src="images/hero/radio-hero.webp"
+            alt=""
+        >
     </div>
 
     <div class="l-content">
-        <div class="c-breadcrumb u-mb-8">
+        <div class="c-breadcrumb">
             <nav class="c-breadcrumb__nav" aria-label="パンくずリスト">
                 <ol>
                     <li>
@@ -129,26 +150,26 @@
         <table class="c-table">
             <caption class="u-visually-hidden">無線用語一覧</caption>
             <colgroup>
-                <col class="c-table-col__term">
-                <col class="c-table-col__meaning">
-                <col class="c-table-col__example">
-                <col class="c-table-col__image">
-                <col class="c-table-col__alphabet">
-                <col class="c-table-col__category">
-                <col class="c-table-col__note">
+                <col class="p-glossary-table__col-term">
+                <col class="p-glossary-table__col-meaning">
+                <col class="p-glossary-table__col-example">
+                <col class="p-glossary-table__col-image">
+                <col class="p-glossary-table__col-alphabet">
+                <col class="p-glossary-table__col-category">
+                <col class="p-glossary-table__col-note">
             </colgroup>
-            <thead>
+            <thead class="p-glossary-table__heading">
                 <tr>
                     <th scope="col">用語</th>
                     <th scope="col">意味</th>
                     <th scope="col">説明・用例</th>
                     <th scope="col">画像</th>
-                    <th class="c-table-th__alphabet" scope="col">アルファベット<br>英語表記</th>
+                    <th class="p-glossary-table__heading-alphabet" scope="col">アルファベット<br>英語表記</th>
                     <th scope="col">分類</th>
                     <th scope="col">補足</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="p-glossary-table__body">
                 <tr>
                     <th scope="row">アマチュア無線</th>
                     <td>趣味でやる無線のこと</td>

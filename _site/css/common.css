@@ -117,7 +117,7 @@ body {
 Header
 ==================== */
 
-.l-header {
+.p-header {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
@@ -129,7 +129,7 @@ Header
 
 /* Header Brand Logo */
 
-.l-header__brand {
+.p-header__brand {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   align-self: center;
@@ -137,7 +137,7 @@ Header
   top: 6px;
 }
 
-.l-header__brand-link {
+.p-header__brand-link {
   display: flex;
   align-items: flex-end;
   gap: 9px;
@@ -145,22 +145,22 @@ Header
   text-decoration: none;
 }
 
-.l-header__brand-link:hover {
+.p-header__brand-link:hover {
   opacity: 0.7;
 }
 
-.l-header__brand-logo {
+.p-header__brand-logo {
   width: 50px;
   height: auto;
 }
 
-.l-header__brand-text{
+.p-header__brand-text{
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.l-header__brand-title {
+.p-header__brand-title {
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
@@ -168,7 +168,7 @@ Header
   text-align: center;
 }
 
-.l-header__brand-tagline {
+.p-header__brand-tagline {
   margin: 0;
   font-size: 12px;
   font-weight: 500;
@@ -180,7 +180,7 @@ Header
 
 /* Header Description */
 
-.l-header__description {
+.p-header__description {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   justify-self: end;
@@ -194,7 +194,7 @@ Header
 
 /* Header Navigation */
 
-.l-header__nav {
+.p-header__nav {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   font-size: 14px;
@@ -202,7 +202,7 @@ Header
   height: 32px;
 }
 
-.l-header__nav ul {
+.p-header__nav-list {
   height: 100%;
   display: flex;
   gap: 20px;
@@ -211,11 +211,11 @@ Header
   list-style: none;
 }
 
-.l-header__nav li {
+.p-header__nav-list-item {
   display: flex;
 }
 
-.l-header__nav a {
+.p-header__nav-link {
   display: flex;
   align-items: center;
   color: inherit;
@@ -223,21 +223,21 @@ Header
   padding: 0 8px;
 }
 
-.l-header__nav a:hover {
+.p-header__nav-link:hover {
   opacity: 0.7;
 }
 
-.l-header__nav-search {
+.p-header__nav-search {
   margin-left: auto;
 }
 
-.l-header__nav-search form {
+.p-header__nav-search-form {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.l-header__nav-search input {
+.p-header__nav-search-input {
   width: 150px;
   height: 30px;
   border: 1px solid var(--color-gray-200);
@@ -245,7 +245,7 @@ Header
   border-radius: 4px;
 }
 
-.l-header__nav-search button {
+.p-header__nav-search-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +259,7 @@ Header
   border-radius: 4px;
 }
 
-.l-header__nav-search svg {
+.p-header__nav-search-icon {
   width: 21px;
   height: 21px;
   fill: none;
@@ -275,6 +275,7 @@ Header
 .p-radio-hero {
   position: relative;
   height: 250px;
+  margin-bottom: 8px;
 }
 
 .p-radio-hero__wrap {
@@ -290,24 +291,16 @@ Header
   margin: 40px 0 0 40px;
 }
 
-.p-radio-hero__text h1 {
+.p-radio-hero__page-title {
   font-size: 40px;
   line-height: 1;
   margin: 0 0 8px 0;
 }
 
-.p-radio-hero__text p {
+.p-radio-hero__page-description {
   letter-spacing: 1.2px;
   font-weight: 500;
   margin: 0;
-}
-
-.p-radio-hero img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 55%;
 }
 
 .p-radio-hero__tagline {
@@ -318,8 +311,16 @@ Header
   font-size: 15px;
 }
 
-.p-radio-hero__tagline span {
+.p-radio-hero__tagline--indent {
   margin-left: 1em;
+}
+
+.p-radio-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 55%;
 }
 
 
@@ -328,6 +329,7 @@ Header
 .c-breadcrumb {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .c-breadcrumb__nav ol {
@@ -372,6 +374,7 @@ Header
 .c-table {
   width: 100%;
   border-collapse: collapse;
+  color: var(--color-blue-900);
 }
 
 
@@ -386,28 +389,26 @@ Header
 
 /* column */
 
-.c-table-col__meaning,
-.c-table-col__example,
-.c-table-col__image {
+.p-glossary-table__col-meaning,
+.p-glossary-table__col-example,
+.p-glossary-table__col-image {
   width: 20%;
 }
 
-.c-table-col__category {
+.p-glossary-table__col-category {
   width: 8%;
 }
 
 
 /* table header */
 
-.c-table thead th {
-  background-color: var(--color-blue-500);
-  color: var(--color-white);
-  font-size: 16px;
-  font-weight: 500;
+.p-glossary-table__heading {
+  background-color: var(--color-gray-200);
+  font-weight: 600;
   white-space: nowrap;
 }
 
-.c-table-th__alphabet {
+.p-glossary-table__heading-alphabet {
   font-size: 13px;
 }
 
@@ -433,7 +434,7 @@ Header
   font-size: 0.7em;
 }
 
-.c-table tbody th:has(ruby) {
+.p-glossary-table__body th:has(ruby) {
   padding-top: 20px;
 }
 
@@ -442,6 +443,6 @@ Header
  Footer
 ==================== */
 
-footer {
+.l-footer {
   text-align: center;
 }

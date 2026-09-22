@@ -17,7 +17,7 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <!-- OGP(Open Graph Protocol) -->
     {% if page.og_title %}
-    <meta property="og_title" content="{{ page.og_title}}">
+    <meta property="og:title" content="{{ page.og_title }}">
     {% endif %}
     {% if page.og_description %}
     <meta property="og:description" content="{{ page.og_description }}">
@@ -29,12 +29,16 @@
     {% if page.favicon %}
     <link rel="icon" href="{{ page.favicon | relative_url }}">
     {% endif %}
-    {% if page.manifest %}
-    <link rel="manifest" href="{{ page.webmanifest | relative_url}}">
+    {% if page.apple_touch_icon %}
+    <link rel="apple-touch-icon" href="{{ page.apple_touch_icon | relative_url }}">
+    {% endif %}
+    {% if page.webmanifest %}
+    <link rel="manifest" href="{{ page.webmanifest | relative_url }}">
     {% endif %}
     <!-- CSS -->
     {% if page.css %}
-    <link rel="stylesheet" href="{{ page.css | relative_url }}">
+        {% for css in page.css %}
+        <link rel="stylesheet" href="{{ css | relative_url }}">
+        {% endfor %}
     {% endif %}
     <!-- Scripts -->
-    
