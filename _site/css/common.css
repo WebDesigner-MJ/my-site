@@ -403,9 +403,13 @@ Header
 /* table header */
 
 .p-glossary-table__heading {
-  background-color: var(--color-gray-200);
-  font-weight: 600;
+  background-color: var(--color-blue-500);
+  color: var(--color-white);
   white-space: nowrap;
+}
+
+.p-glossary-table__heading th {
+  font-weight: 500;
 }
 
 .p-glossary-table__heading-alphabet {
@@ -415,11 +419,11 @@ Header
 
 /* table body */
 
-.c-table tbody {
+.p-glossary-table__body {
   font-size: 14px;
 }
 
-.c-table tbody th {
+.p-glossary-table__body th {
   text-align: left;
   font-weight: 600;
 }
